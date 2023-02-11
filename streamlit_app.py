@@ -7,8 +7,8 @@ st.write("""
 
 import joblib
 # Carrega o modelo e o vetorizador
-clf = joblib.load("model//model.pkl")
-vectorizer = joblib.load("model//vectorizer.pkl")
+clf = joblib.load("model//multinominalnb_model//model.pkl")
+vectorizer = joblib.load("model//multinominalnb_model//vectorizer.pkl")
 
 
 def prediction(text):
