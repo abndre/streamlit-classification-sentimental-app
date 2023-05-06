@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
@@ -8,15 +7,15 @@ st.write("""
 # Projeto Integrador 4 - Wordcloud
 """)
 
-df = pd.read_csv("data/imdb-reviews-pt-br.zip")
+with open('data/clean_txt.txt', 'r') as file:
+    result_list = file.read().splitlines()
 
-text = " ".join(i for i in df.text_pt)
-
-# Create and generate a word cloud image:
-wordcloud = WordCloud().generate(text)
-
-# Display the generated image:
+text = " ".join(i for i in result_list)
+wordcloud = WordCloud(background_color="white").generate(text)
+plt.figure( figsize=(15,10))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
+
+
 st.pyplot()
