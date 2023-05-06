@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 sentimento  = ""
 st.write("""
-# Projeto Integrador 4 - Interface Reativa
+# Projeto Integrador 4 - Análise de Sentimento com Modelo Treinado pelo Grupo
 """)
 
 import joblib
